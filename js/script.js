@@ -1,6 +1,6 @@
-
+//función que convierte la primera letra de los strings de un array en mayúscula y su resto en minúscula
 function capitalizarArray(array) {
-  return array.map(str => {
+  return array.map(str => { 
     if (typeof str === 'string' && str.length > 0) {
       return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     } else {
@@ -51,7 +51,7 @@ function showList(array) {
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   const variable_con_strings = strangeArray.filter((word) => typeof word == "string" );
-  
+
   const variable_con_strings_mayuscula = capitalizarArray(variable_con_strings)
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
     showList(variable_con_strings_mayuscula.sort())
