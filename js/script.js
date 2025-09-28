@@ -1,3 +1,15 @@
+
+function capitalizarArray(array) {
+  return array.map(str => {
+    if (typeof str === 'string' && str.length > 0) {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    } else {
+      return str; // Retorna el valor tal cual si no es string o está vacío
+    }
+  });
+}
+
+
 // Array extraño
 const strangeArray = [
   "Zero",
@@ -38,5 +50,10 @@ function showList(array) {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
+  const variable_con_strings = strangeArray.filter((word) => typeof word == "string" );
+  
+  const variable_con_strings_mayuscula = capitalizarArray(variable_con_strings)
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+    showList(variable_con_strings_mayuscula.sort())
+
 });
